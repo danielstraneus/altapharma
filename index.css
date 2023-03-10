@@ -1,9 +1,9 @@
-@font-face {
+/* @font-face {
   font-family: "akz-bold";
   src: url("./AkzidenzGrotesk-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 */ body,
 html {
@@ -80,7 +80,7 @@ table,
 input {
   display: grid;
   gap: 4px;
-  font-family: "akz-bold";
+  font-family: "akz-bold", Helvetica, sans-serif;
   font-weight: bold;
   letter-spacing: 0.5px;
   font-weight: bold;
@@ -88,7 +88,7 @@ input {
   line-break: strict;
 }
 .autocomplete-items {
-  font-family: "akz-bold";
+  font-family: "akz-bold", Helvetica, sans-serif;
   font-weight: bold;
   letter-spacing: 0.5px;
   position: absolute;
@@ -174,7 +174,7 @@ details,
 #arrows {
   color: royalblue;
   text-align: start;
-  font-family: "akz-bold";
+  font-family: "akz-bold", Helvetica, sans-serif;
   font-weight: bold;
   letter-spacing: 0.5px;
   font-size: 11px;
@@ -260,7 +260,7 @@ tr {
 
 ul {
   list-style: none;
-  font-family: "akz-bold";
+  font-family: "akz-bold", Helvetica, sans-serif;
   font-weight: bold;
   letter-spacing: 0.5px;
   font-size: 11px;
@@ -329,7 +329,7 @@ ul li i:after {
 }
 
 ul li p {
-  font-family: "akz-bold";
+  font-family: "akz-bold", Helvetica, sans-serif;
   position: absolute;
   width: 98%;
   left: 0;
@@ -504,7 +504,7 @@ aside {
 }
 
 label {
-  font-family: "akz-bold";
+  font-family: "akz-bold", Helvetica, sans-serif;
   display: block;
   position: relative;
   padding-left: 16px;
@@ -614,12 +614,12 @@ table a {
   margin-left: -25px;
   margin-top: -23px;
   font-size: 9px;
+  line-height: 11px;
 }
 
 .sortable {
   margin-left: 3px;
-
-  margin-top: -12px;
+  margin-top: -18px;
   font-weight: bold;
 }
 thead th {
