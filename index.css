@@ -81,7 +81,6 @@ input {
   font-family: "akz-bold";
   font-weight: bold;
   letter-spacing: 0.5px;
-  font-size: 11px;
   font-weight: bold;
 
   line-break: strict;
@@ -275,7 +274,7 @@ ul li i {
   position: absolute;
   transform: translate(-3px, 0);
   right: 0;
-  margin-right: 43px;
+  margin-right: 47px;
   top: 8px;
   z-index: 5;
 }
@@ -648,5 +647,30 @@ body {
 @media screen and (min-width: 700px) {
   .column-7 {
     grid-template-columns: auto auto auto auto auto auto auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  *,
+  input,
+  table {
+    font-size: 9px !important;
+  }
+  .sortable {
+    margin-top: 24px;
+  }
+  ul li i {
+    position: absolute;
+    transform: translate(-0px, 0);
+    right: 0;
+    margin-right: 46px;
+    top: 7px;
+    z-index: 5;
+  }
+  .info-text {
+    font-size: 8.5px !important;
+    line-height: 11px !important;
+    width: 265px;
+    margin-top: -19px;
   }
 }
