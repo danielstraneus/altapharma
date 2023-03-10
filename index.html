@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AltaPharma</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="pics">
+      <img class="img" src="forest-1.gif" alt="flower" />
+      <img class="img-2" src="forest-1.gif" alt="flower" />
+      <img class="img-3" src="forest-1.gif" alt="flower" />
+    </div>
+
+    <div class="header">
+      <h1>
+        <p id="tja" data-replace="Pharmaceutical search engine">
+          <span id="tjo">AltaPharma</span>
+        </p>
+      </h1>
+      <ul id="menu">
+        <li>
+          <label>
+            <input id="comp" type="checkbox" checked /> company
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input id="indu" type="checkbox" checked /> industry
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input id="foun" type="checkbox" checked /> founded
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input id="reve" type="checkbox" checked /> revenue
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input id="town" type="checkbox" /> city
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input id="land" type="checkbox" /> country
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input id="webs" type="checkbox" /> website
+            <span class="checkmark"></span>
+          </label>
+        </li>
+      </ul>
+
+      <ul class="info-button">
+        <li>
+          <input id="info" type="checkbox" checked />
+          <i></i>
+          INFO
+          <p class="info-text">
+            This listing is limited to independent companies and subsidiaries
+            notable enough to have their own articles in Wikipedia. Included
+            here are companies engaged in pharmaceutical development, supply
+            chain management and device development, including compounding
+            pharmacies. click any header to sort by chosen category. <br />
+            <br />
+            if using mobile device or screen with small viewport width: scroll
+            table horizontally to view added categories. <br />
+            <br />built by <a href="">rev x</a>. powered by mountain dew. © 2023
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <input
+      type="text"
+      class="autocomplete"
+      id="myInput"
+      onkeyup="searchTable()"
+      placeholder="TYPE HERE TO SEARCH..."
+      autocomplete="off"
+    />
+
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th id="company">company</th>
+          <th id="industry">industry</th>
+          <th id="founded">founded</th>
+          <th id="revenue">revenue</th>
+          <th id="country">country</th>
+          <th id="city">city</th>
+          <th id="website">website</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        <tr>
+          <td class="comp">Johnson & Johnson<span>Johnson Johnson</span></td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1886">1886</td>
+          <td class="reve" data-sort="93770">93 770 $m<span>93770</span></td>
+          <td class="land">USA</td>
+          <td class="town">New Jersey</td>
+          <td class="webs">
+            <a href="https://www.jnj.com/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Pfizer</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1849">1849</td>
+          <td class="reve" data-sort="83290">83 290 $m<span>83290</span></td>
+          <td class="land">USA</td>
+          <td class="town">New York</td>
+          <td class="webs">
+            <a href="https://www.pfizer.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Roche</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1896">1896</td>
+          <td class="reve" data-sort="68700">68 700 $m<span>68700</span></td>
+          <td class="land">Switzerland</td>
+          <td class="town">Basel</td>
+          <td class="webs">
+            <a href="https://www.roche.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Abbvie</td>
+          <td class="indu">Biopharmaceutical</td>
+          <td class="foun" data-sort="2013">2013</td>
+          <td class="reve" data-sort="56200">56 200 $m<span>56200</span></td>
+          <td class="land">USA</td>
+          <td class="town">Chicago</td>
+          <td class="webs">
+            <a href="https://www.AbbVie.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Novartis</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1996">1996</td>
+          <td class="reve" data-sort="51630">51 630 $m<span>51630</span></td>
+          <td class="land">Switzerland</td>
+          <td class="town">Basel</td>
+          <td class="webs">
+            <a href="https://www.novartis.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Merck & co<span>Merck co</span></td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1891">1891</td>
+          <td class="reve" data-sort="48700">48 700 $m<span>48700</span></td>
+          <td class="land">USA</td>
+          <td class="town">New Jersey</td>
+          <td class="webs">
+            <a href="https://www.msd.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Bristol-Myers Squibb</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1887">1887</td>
+          <td class="reve" data-sort="46400">46 400 $m<span>46400</span></td>
+          <td class="land">USA</td>
+          <td class="town">New York</td>
+          <td class="webs">
+            <a href="https://www.bms.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Sanofi</td>
+          <td class="indu">Healthcare</td>
+          <td class="foun" data-sort="1973">1973</td>
+          <td class="reve" data-sort="44670">44 670 $m<span>44670</span></td>
+          <td class="land">France</td>
+          <td class="town">Paris</td>
+          <td class="webs">
+            <a href="https://www.sanofi.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">GlaxoSmithKline</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="2000">2000</td>
+          <td class="reve" data-sort="43570">43 570 $m<span>43570</span></td>
+          <td class="land">England</td>
+          <td class="town">London</td>
+          <td class="webs">
+            <a href="https://www.gsk.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Abbott</td>
+          <td class="indu">Medical devices</td>
+          <td class="foun" data-sort="1888">1888</td>
+          <td class="reve" data-sort="43100">43 100 $m<span>43100</span></td>
+          <td class="land">USA</td>
+          <td class="town">Illinois</td>
+          <td class="webs">
+            <a href="https://www.abbott.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">AstraZeneca</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1999">1999</td>
+          <td class="reve" data-sort="37420">37 420 $m<span>37420</span></td>
+          <td class="land">England</td>
+          <td class="town">Cambridge</td>
+          <td class="webs">
+            <a href="https://www.astrazeneca.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Takeda</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1781">1781</td>
+          <td class="reve" data-sort="31550">31 550 $m<span>31550</span></td>
+          <td class="land">Japan</td>
+          <td class="town">Osaka</td>
+          <td class="webs">
+            <a href="https://www.takeda.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Eli Lilly and Company</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1876">1876</td>
+          <td class="reve" data-sort="28320">28 320 $m<span>28320</span></td>
+          <td class="land">Usa</td>
+          <td class="town">Indiana</td>
+          <td class="webs">
+            <a href="https://www.lilly.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Bayer</td>
+          <td class="indu">Chemicals</td>
+          <td class="foun" data-sort="1863">1863</td>
+          <td class="reve" data-sort="28230">28 230 $m<span>28230</span></td>
+          <td class="land">Germany</td>
+          <td class="town">Leverkusen</td>
+          <td class="webs">
+            <a href="https://www.bayer.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Gilead Sciences</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="1987">1987</td>
+          <td class="reve" data-sort="27300">27 300 $m<span>27300</span></td>
+          <td class="land">Usa</td>
+          <td class="town">California</td>
+          <td class="webs">
+            <a href="https://www.gilead.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Amgen</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="1980">1980</td>
+          <td class="reve" data-sort="25980">25 980 $m<span>25980</span></td>
+          <td class="land">Usa</td>
+          <td class="town">California</td>
+          <td class="webs">
+            <a href="https://www.amgen.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Boehringer Ingelheim</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1885">1885</td>
+          <td class="reve" data-sort="24360">24 360 $m<span>24360</span></td>
+          <td class="land">Germany</td>
+          <td class="town">Ingelheim</td>
+          <td class="webs">
+            <a href="https://www.boehringer-ingelheim.com" target="_blank"
+              >visit</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Novo Nordisk</td>
+          <td class="indu">Healthcare</td>
+          <td class="foun" data-sort="1923">1923</td>
+          <td class="reve" data-sort="22380">22 380 $m<span>22380</span></td>
+          <td class="land">Denmark</td>
+          <td class="town">Novo Allé</td>
+          <td class="webs">
+            <a href="https://www.novonordisk.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">BioNTech</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="2008">2008</td>
+          <td class="reve" data-sort="22440">22 440 $m<span>22440</span></td>
+          <td class="land">Germany</td>
+          <td class="town">Mainz</td>
+          <td class="webs">
+            <a href="https://www.biontech.de" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">McKesson</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1835">1835</td>
+          <td class="reve" data-sort="21180">21 180 $m<span>21180</span></td>
+          <td class="land">USA</td>
+          <td class="town">Texas</td>
+          <td class="webs">
+            <a href="https://www.McKesson.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Moderna</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="2010">2010</td>
+          <td class="reve" data-sort="18470">18 470 $m<span>18470</span></td>
+          <td class="land">USA</td>
+          <td class="town">Massachusetts</td>
+          <td class="webs">
+            <a href="https://www.modernatx.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Viatris</td>
+          <td class="indu">Healthcare</td>
+          <td class="foun" data-sort="2020">2020</td>
+          <td class="reve" data-sort="17890">17 890 $m<span>17890</span></td>
+          <td class="land">USA</td>
+          <td class="town">Pennsylvania</td>
+          <td class="webs">
+            <a href="https://www.viatris.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Celgene</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="1986">1986</td>
+          <td class="reve" data-sort="15281">15 281 $m<span>15281</span></td>
+          <td class="land">USA</td>
+          <td class="town">New Jersey</td>
+          <td class="webs">
+            <a href="https://www.bms.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Baxter</td>
+          <td class="indu">Medical devices</td>
+          <td class="foun" data-sort="1931">1931</td>
+          <td class="reve" data-sort="12780">12 780 $m<span>12780</span></td>
+          <td class="land">USA</td>
+          <td class="town">illinois</td>
+          <td class="webs">
+            <a href="https://www.baxter.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Biogen</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="1978">1978</td>
+          <td class="reve" data-sort="10981">10 981 $m<span>10981</span></td>
+          <td class="land">USA</td>
+          <td class="town">Massachusetts</td>
+          <td class="webs">
+            <a href="https://www.biogen.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Daiichi Sankyo</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="2005">2005</td>
+          <td class="reve" data-sort="9028">9 028 $m<span>9028</span></td>
+          <td class="land">Japan</td>
+          <td class="town">Tokyo</td>
+          <td class="webs">
+            <a href="http://www.daiichisankyo.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Bausch Health</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1959">1959</td>
+          <td class="reve" data-sort="8430">8 430 $m<span>8430</span></td>
+          <td class="land">Canada</td>
+          <td class="town">quebec</td>
+          <td class="webs">
+            <a href="https://www.bauschhealth.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Alcon</td>
+          <td class="indu">Ophthalmology</td>
+          <td class="foun" data-sort="1945">1945</td>
+          <td class="reve" data-sort="8300">8 300 $m<span>8300</span></td>
+          <td class="land">Germany</td>
+          <td class="town">Geneva</td>
+          <td class="webs">
+            <a href="https://www.alcon.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Zoetis</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1952">1952</td>
+          <td class="reve" data-sort="7780">7 780 $m<span>7780</span></td>
+          <td class="land">USA</td>
+          <td class="town">New Jersey</td>
+          <td class="webs">
+            <a href="https://www.zoetis.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Adcock Ingram</td>
+          <td class="indu">Healtcare</td>
+          <td class="foun" data-sort="1890">1890</td>
+          <td class="reve" data-sort="7770">7 770 $m<span>7770</span></td>
+          <td class="land">South Africa</td>
+          <td class="town">Johannesburg</td>
+          <td class="webs">
+            <a href="https://www.adcock.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">B. Braun</td>
+          <td class="indu">Healthcare</td>
+          <td class="foun" data-sort="1839">1839</td>
+          <td class="reve" data-sort="6908">6 908 $m<span>6908</span></td>
+          <td class="land">Germany</td>
+          <td class="town">Melsungen</td>
+          <td class="webs">
+            <a href="https://www.bbraun.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Galderma</td>
+          <td class="indu">Dermatology</td>
+          <td class="foun" data-sort="1981">1981</td>
+          <td class="reve" data-sort="3417">3 417 $m<span>5000</span></td>
+          <td class="land">Switzerland</td>
+          <td class="town">zug</td>
+          <td class="webs">
+            <a href="https://www.galderma.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Sun Pharma</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1983">1983</td>
+          <td class="reve" data-sort="5000">5 000 $m<span>5000</span></td>
+          <td class="land">India</td>
+          <td class="town">Mumbai</td>
+          <td class="webs">
+            <a href="https://www.sunpharma.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Bausch + Lomb</td>
+          <td class="indu">Medical Devices</td>
+          <td class="foun" data-sort="1853">1853</td>
+          <td class="reve" data-sort="4871">4 871 $m<span>4871</span></td>
+          <td class="land">Canada</td>
+          <td class="town">Ontario</td>
+          <td class="webs">
+            <a href="https://www.bausch.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Dentsply Sirona</td>
+          <td class="indu">Dental equipment</td>
+          <td class="foun" data-sort="2016">2016</td>
+          <td class="reve" data-sort="4030">4 030 $m<span>4030</span></td>
+          <td class="land">USA</td>
+          <td class="town">North Carolina</td>
+          <td class="webs">
+            <a href="https://www.dentsplysirona.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Perrigo</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1887">1887</td>
+          <td class="reve" data-sort="4140">4 140 $m<span>4140</span></td>
+          <td class="land">USA</td>
+          <td class="town">Michigan</td>
+          <td class="webs">
+            <a href="https://www.perrigo.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Catalent</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="2007">2007</td>
+          <td class="reve" data-sort="3998">3 998 $m<span>3998</span></td>
+          <td class="land">USA</td>
+          <td class="town">New Jersey</td>
+          <td class="webs">
+            <a href="https://www.catalent.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Grifols</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1940">1940</td>
+          <td class="reve" data-sort="3934">3 934 $m<span>3934</span></td>
+          <td class="land">Spain</td>
+          <td class="town">Barcelona</td>
+          <td class="webs">
+            <a href="https://www.grifols.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Horizon</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="2005">2005</td>
+          <td class="reve" data-sort="3230">3 230 $m<span>3230</span></td>
+          <td class="land">ireland</td>
+          <td class="town">Dublin</td>
+          <td class="webs">
+            <a href="https://www.horizontherapeutics.com" target="_blank"
+              >visit</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">bioMérieux</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="1963">1963</td>
+          <td class="reve" data-sort="3100">3 100 $m<span>3100</span></td>
+          <td class="land">France</td>
+          <td class="town">Lyon</td>
+          <td class="webs">
+            <a href="https://www.biomerieux.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Vertex</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1989">1989</td>
+          <td class="reve" data-sort="3040">3 040 $m<span>3040</span></td>
+          <td class="land">USA</td>
+          <td class="town">Massachusetts</td>
+          <td class="webs">
+            <a href="https://www.vrtx.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Shionogi</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="1878">1878</td>
+          <td class="reve" data-sort="3009">3 009 $m<span>3009</span></td>
+          <td class="land">Japan</td>
+          <td class="town">Osaka</td>
+          <td class="webs">
+            <a href="https://www.shionogi.com/eu/en/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Purdue</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1892">1892</td>
+          <td class="reve" data-sort="3000">3 000 $m<span>3000</span></td>
+          <td class="land">USA</td>
+          <td class="town">Connecticut</td>
+          <td class="webs">
+            <a href="https://www.purduepharma.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Incyte</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="2002">2002</td>
+          <td class="reve" data-sort="2990">2 990 $m<span>2990</span></td>
+          <td class="land">USA</td>
+          <td class="town">Delaware</td>
+          <td class="webs">
+            <a href="https://www.incyte.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Endo</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1997">1997</td>
+          <td class="reve" data-sort="2993">2 993 $m<span>2993</span></td>
+          <td class="land">USA</td>
+          <td class="town">Pennsylvania</td>
+          <td class="webs">
+            <a href="https://www.endo.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Aurobindo</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1986">1986</td>
+          <td class="reve" data-sort="2900">2 900 $m<span>2900</span></td>
+          <td class="land">India</td>
+          <td class="town">Telangana</td>
+          <td class="webs">
+            <a href="https://www.aurobindo.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Cipla</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1935">1935</td>
+          <td class="reve" data-sort="2700">2 700 $m<span>2700</span></td>
+          <td class="land">India</td>
+          <td class="town">Maharashtra</td>
+          <td class="webs">
+            <a href="https://www.cipla.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Altana</td>
+          <td class="indu">Chemicals</td>
+          <td class="foun" data-sort="1977">1977</td>
+          <td class="reve" data-sort="2700">2 700 $m<span>2700</span></td>
+          <td class="land">Germany</td>
+          <td class="town">Wesel</td>
+          <td class="webs">
+            <a href="https://www.altana.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Hikma</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1978">1978</td>
+          <td class="reve" data-sort="2553">2 553 $m<span>2553</span></td>
+          <td class="land">England</td>
+          <td class="town">London</td>
+          <td class="webs">
+            <a href="https://www.hikma.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Intas</td>
+          <td class="indu">Biopharmaceutical</td>
+          <td class="foun" data-sort="1977">1977</td>
+          <td class="reve" data-sort="2300">2 300 $m<span>2300</span></td>
+          <td class="land">India</td>
+          <td class="town">Gujarat</td>
+          <td class="webs">
+            <a href="https://www.intaspharma.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Chiesi</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1935">1935</td>
+          <td class="reve" data-sort="2229">2 229 $m<span>2229</span></td>
+          <td class="land">Italy</td>
+          <td class="town">Parma</td>
+          <td class="webs">
+            <a href="https://www.chiesi.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Dr. Reddy's</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1984">1984</td>
+          <td class="reve" data-sort="2200">2 200 $m<span>2200</span></td>
+          <td class="land">India</td>
+          <td class="town">Telangana</td>
+          <td class="webs">
+            <a href="https://www.drreddys.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">CSL</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="1916">1916</td>
+          <td class="reve" data-sort="2229">1 919 $m<span>1919</span></td>
+          <td class="land">USA</td>
+          <td class="town">Pennsylvania</td>
+          <td class="webs">
+            <a href="https://www.cslbehring.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Zydus</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1952">1952</td>
+          <td class="reve" data-sort="1900">1 900 $m<span>1900</span></td>
+          <td class="land">India</td>
+          <td class="town">Gujarat</td>
+          <td class="webs">
+            <a href="https://www.zyduslife.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">BioMarin</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="1997">1997</td>
+          <td class="reve" data-sort="1860">1 860 $m<span>1860</span></td>
+          <td class="land">USA</td>
+          <td class="town">California</td>
+          <td class="webs">
+            <a href="https://www.biomarin.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">King</td>
+          <td class="indu">Healthcare</td>
+          <td class="foun" data-sort="1994">1994</td>
+          <td class="reve" data-sort="1700">1 700 $m<span>1700</span></td>
+          <td class="land">USA</td>
+          <td class="town">Tennesse</td>
+          <td class="webs">
+            <a href="https://www.kingpharm.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Jazz</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="2005">2005</td>
+          <td class="reve" data-sort="1618">1 618 $m<span>1618</span></td>
+          <td class="land">Irelan</td>
+          <td class="town">Dublin</td>
+          <td class="webs">
+            <a href="https://www.jazzpharma.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Fareva</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1985">1985</td>
+          <td class="reve" data-sort="1600">1 600 $m<span>1600</span></td>
+          <td class="land">France</td>
+          <td class="town">Tournon-sur-Rhone</td>
+          <td class="webs">
+            <a href="https://www.fareva.com/en" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Gedeon Richter</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="1901">1901</td>
+          <td class="reve" data-sort="1570">1 570 $m<span>1570</span></td>
+          <td class="land">Hungary</td>
+          <td class="town">Budapest</td>
+          <td class="webs">
+            <a href="https://www.gedeonrichter.com/en/" target="_blank"
+              >visit</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Hisamitsu</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1847">1847</td>
+          <td class="reve" data-sort="1470">1 470 $m<span>1470</span></td>
+          <td class="land">Japan</td>
+          <td class="town">Tokyo</td>
+          <td class="webs">
+            <a href="https://global.hisamitsu/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">CureVac</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="2000">2000</td>
+          <td class="reve" data-sort="1860">1 400 $m<span>1400</span></td>
+          <td class="land">Germany</td>
+          <td class="town">Tubingen</td>
+          <td class="webs">
+            <a href="https://www.curevac.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Ionis</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="1989">1989</td>
+          <td class="reve" data-sort="1222">1 222 $m<span>1222</span></td>
+          <td class="land">USA</td>
+          <td class="town">California</td>
+          <td class="webs">
+            <a href="https://www.ionispharma.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Biocon Limited</td>
+          <td class="indu">Biopharmaceutical</td>
+          <td class="foun" data-sort="1978">1978</td>
+          <td class="reve" data-sort="1100">1 100 $m<span>1100</span></td>
+          <td class="land">India</td>
+          <td class="town">Bangalore</td>
+          <td class="webs">
+            <a href="https://www.biocon.com" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Emergent</td>
+          <td class="indu">Biopharmaceutical</td>
+          <td class="foun" data-sort="1998">1998</td>
+          <td class="reve" data-sort="1100">1 100 $m<span>1100</span></td>
+          <td class="land">USA</td>
+          <td class="town">Maryland</td>
+          <td class="webs">
+            <a href="https://www.emergentbiosolutions.com/" target="_blank"
+              >visit</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Alkermes</td>
+          <td class="indu">Biotechnology</td>
+          <td class="foun" data-sort="1987">1987</td>
+          <td class="reve" data-sort="1000">1 000 $m<span>1000</span></td>
+          <td class="land">ireland</td>
+          <td class="town">Dublin</td>
+          <td class="webs">
+            <a href="https://www.alkermes.com/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Almirall</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1943">1943</td>
+          <td class="reve" data-sort="855">855 $m<span>855</span></td>
+          <td class="land">Spain</td>
+          <td class="town">Barcelona</td>
+          <td class="webs">
+            <a href="https://www.almirall.com/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Capsugel</td>
+          <td class="indu">Healthcare</td>
+          <td class="foun" data-sort="1960">1960</td>
+          <td class="reve" data-sort="750">750 $m<span>750</span></td>
+          <td class="land">USA</td>
+          <td class="town">New Jersey</td>
+          <td class="webs">
+            <a href="https://www.capsugel.com/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">ACI Limited</td>
+          <td class="indu">Chemicals</td>
+          <td class="foun" data-sort="1973">1973</td>
+          <td class="reve" data-sort="740">740 $m<span>740</span></td>
+          <td class="land">Bangladesh</td>
+          <td class="town">Dhaka</td>
+          <td class="webs">
+            <a
+              href="https://www.pharmamirror.com/knowledge-base/company-profile/advanced-chemical-industries-aci-limited/"
+              target="_blank"
+              >visit</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Ipca</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1949">1949</td>
+          <td class="reve" data-sort="740">740 $m<span>740</span></td>
+          <td class="land">India</td>
+          <td class="town">Mumbai</td>
+          <td class="webs">
+            <a href="https://www.ipca.com/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Emcure</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1981">1981</td>
+          <td class="reve" data-sort="730">730 $m<span>730</span></td>
+          <td class="land">India</td>
+          <td class="town">Pune</td>
+          <td class="webs">
+            <a href="https://www.emcure.com/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">BTG Limited</td>
+          <td class="indu">Healthcare</td>
+          <td class="foun" data-sort="1991">1991</td>
+          <td class="reve" data-sort="620">620 $m<span>620</span></td>
+          <td class="land">England</td>
+          <td class="town">London</td>
+          <td class="webs">
+            <a
+              href="https://www.bostonscientific.com/en-US/Home.html"
+              target="_blank"
+              >visit</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Incepta</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1999">1999</td>
+          <td class="reve" data-sort="326">326 $m<span>326</span></td>
+          <td class="land">Bangladesh</td>
+          <td class="town">Dhaka</td>
+          <td class="webs">
+            <a href="http://www.inceptapharma.com/index.php" target="_blank"
+              >visit</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Beximco</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1980">1980</td>
+          <td class="reve" data-sort="300">300 $m<span>300</span></td>
+          <td class="land">Bangladesh</td>
+          <td class="town">Dhaka</td>
+          <td class="webs">
+            <a href="https://beximcopharma.com/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Alnylam</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="2002">2002</td>
+          <td class="reve" data-sort="219">219 $m<span>219</span></td>
+          <td class="land">USA</td>
+          <td class="town">Massachusetts</td>
+          <td class="webs">
+            <a href="https://www.alnylam.com/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Clovis</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="2009">2009</td>
+          <td class="reve" data-sort="165">165 $m<span>165</span></td>
+          <td class="land">USA</td>
+          <td class="town">Colorado</td>
+          <td class="webs">
+            <a href="https://clovisoncology.com/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">AryoGen</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" ata-sort="2009">2009</td>
+          <td class="reve" data-sort="100">100 $m<span>100</span></td>
+          <td class="land">Iran</td>
+          <td class="town">Tehran</td>
+          <td class="webs">
+            <a href="https://www.aryogen.com/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Bosnalijek</td>
+          <td class="indu">Pharmaceutical</td>
+          <td class="foun" data-sort="1951">1951</td>
+          <td class="reve" data-sort="80">80 $m<span>80</span></td>
+          <td class="land">Bosnia</td>
+          <td class="town">Sarajevo</td>
+          <td class="webs">
+            <a href="http://www.bosnalijek.ba/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Hemispherx</td>
+
+          <td class="indu">Biopharmaceutical</td>
+          <td class="foun" data-sort="1990">1990</td>
+          <td class="reve" data-sort="64">64 $m<span>64</span></td>
+          <td class="land">USA</td>
+          <td class="town">Florida</td>
+          <td class="webs">
+            <a href="https://aimimmuno.com/" target="_blank">visit</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="comp">Biocryst</td>
+          <td class="indu">Healthcare</td>
+          <td class="foun" data-sort="1986">1986</td>
+          <td class="reve" data-sort="49">49 $m<span>49</span></td>
+          <td class="land">USA</td>
+          <td class="town">North Carolina</td>
+          <td class="webs">
+            <a href="https://www.biocryst.com" target="_blank">visit</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="intro"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
