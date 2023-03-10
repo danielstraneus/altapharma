@@ -1,6 +1,6 @@
 @font-face {
   font-family: "akz-bold";
-  src: url(./akzidenz-grotesk/Akzidenz-grotesk-bold.ttf);
+  src: url(./akzidenz-grotesk/Akzidenz-grotesk-bold.ttf) format("truetype");
 }
 
 */ body,
@@ -651,6 +651,7 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+  *,
   input,
   table,
   td,
@@ -660,7 +661,7 @@ body {
     font-size: 9px;
   }
   .sortable {
-    margin-top: 21px;
+    margin-top: 20px;
   }
   ul li i {
     position: absolute;
@@ -671,7 +672,7 @@ body {
     z-index: 5;
   }
   .info-text {
-    font-size: 8.5px !important;
+    font-size: 7.5px !important;
     line-height: 11px !important;
     width: 265px;
     margin-top: -19px;
