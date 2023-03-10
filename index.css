@@ -654,29 +654,30 @@ body {
 
 @media screen and (max-width: 450px) {
   *,
-  input,
-  table,
   td,
   tr,
-  p,
   th {
     font-size: 9px;
   }
   .sortable {
-    margin-top: 20px;
+    margin-top: -16px;
   }
   ul li i {
     position: absolute;
     transform: translate(-0px, 0);
     right: 0;
-    margin-right: 46px;
-    top: 7px;
+    margin-right: 52px;
+    top: 9.5px;
     z-index: 5;
   }
   .info-text {
-    font-size: 7.5px !important;
+    font-size: 8px !important;
     line-height: 11px !important;
     width: 265px;
-    margin-top: -19px;
+    margin-top: -22px;
+  }
+  #tjo,
+  .info-button li {
+    font-size: 11px;
   }
 }
